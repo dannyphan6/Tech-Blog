@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Set up Handlebars.js engine with custom helpers
-// const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({ helpers });
 
 const sesh = {
   secret: 'Super secret secret',
@@ -27,8 +27,8 @@ const sesh = {
 app.use(session(sesh));
 
 // Inform Express.js on which template engine to use
-// app.engine('handlebars', hbs.engine);
-// app.set('view engine', 'handlebars');
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
