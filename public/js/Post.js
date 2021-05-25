@@ -62,3 +62,4 @@ const delPostHandler = async () => {
 
 document.querySelector('.delete-btn').addEventListener('submit', delPostHandler);
 document.querySelector('.new-post').addEventListener('submit', newPostHandler);
+document.querySelector('.update-post').addEventListener('submit', updatePostHandler);
