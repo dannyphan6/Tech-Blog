@@ -1,11 +1,14 @@
 [
     {
+        "title": "First Comment",
         "body": "Hello World"
     },
     {
+        "title": "Second Comment",
         "body": "Hi my name is Daniel"
     },
     {
+        "title": "Third Comment",
         "body": "Testing this comment"
     }
 ]
