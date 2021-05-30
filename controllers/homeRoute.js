@@ -35,6 +35,7 @@ router.get('/', withAuth, async (req, res) => {
   })
 
   router.get('/signup', (req, res) => {
+    console.log('hello world')
     res.render('signup')
   })
 
