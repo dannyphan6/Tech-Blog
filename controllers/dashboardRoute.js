@@ -1,1 +1,9 @@
-// Need handlebars set up first 
+const router = require('express').Router();
+const { Comment, Post, User } = require('../models');
+const withAuth = require('../utils/auth');
+
+router.get('/', withAuth, (req, res) => {
+    res.render('dashboard')
+})
+
+module.exports = router
