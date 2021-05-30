@@ -20,9 +20,10 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    // Find one user in req.body that has a username
+    // Find one user in req.body where a username exists
     const userData = await User.findOne({ where: { username: req.body.username } });
 
+    // If there is not a username associated with a user, then send the message 'Incorrect...'
     if (!userData) {
       res
         .status(400)
