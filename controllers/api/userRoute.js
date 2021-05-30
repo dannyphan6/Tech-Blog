@@ -1,14 +1,13 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-
-
 router.post('/', async (req, res) => {
-  console.log("Hit route here");
   try {
+    // Creates a new user and store it into userData
     const userData = await User.create(req.body);
 
     req.session.save(() => {
+      // Saving a session with a user ID IF a user is truly logged in
       req.session.user_id = userData.id;
       req.session.logged_in = true;
 
@@ -21,6 +20,7 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
+    // Find one user in req.body that has a username
     const userData = await User.findOne({ where: { username: req.body.username } });
 
     if (!userData) {
