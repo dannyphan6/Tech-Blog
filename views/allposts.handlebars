@@ -1,7 +1,10 @@
 <div class="card mb-5 mt-5 ml-4 mr-4">
-    <div class="card-header">
-        <p>First Comment</p>
+    <div class="card-header"{{#each posts as |post|}}>
+        <p>{{post.title}}</p>
+        <p>{{post.body}}</p>
     </div>
+
+    {{/each}}
     <div class="card-body">
         <p>Hello world</p>
     </div>
