@@ -15,3 +15,7 @@
 #new-post {
     width: 75%;
 }
+
+.custom-p {
+    margin: 0!important;
+}

@@ -1,11 +1,9 @@
-<div class="card mb-5 mt-5 ml-4 mr-4">
-    <div class="card-header"{{#each posts as |post|}}>
-        <p>{{post.title}}</p>
-        <p>{{post.body}}</p>
+<div class="card mb-4 mt-4 ml-4 mr-4">{{#each posts as |post|}} 
+    <div class="card-header">
+        <p class="custom-p">{{post.title}}</p>
     </div>
-
-    {{/each}}
     <div class="card-body">
-        <p>Hello world</p>
+        <p class="custom-p">{{post.body}}</p>
     </div>
+    {{/each}}
 </div>

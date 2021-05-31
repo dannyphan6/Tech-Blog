@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// User creates a post
 router.post('/', async (req, res) => {
   try {
     // Creates a new user and store it into userData
@@ -18,6 +19,7 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Creates a User login
 router.post('/login', async (req, res) => {
   try {
     // Find one user in req.body where a username exists
@@ -31,6 +33,7 @@ router.post('/login', async (req, res) => {
       return;
     }
 
+    // Checks to see if the username matches the password in req.body 
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
@@ -52,6 +55,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// Route for user to logout
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

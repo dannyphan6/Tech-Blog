@@ -15,6 +15,7 @@ router.post('/', withAuth, async (req, res) => {
     }
 })
 
+// Edits a single post dependent on the ID
 router.put('/:id', withAuth, async (req, res) => {
     try {
         const updatePost = await Post.update(
@@ -30,6 +31,7 @@ router.put('/:id', withAuth, async (req, res) => {
     }
 })
 
+// Deletes a single post dependent on the ID
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const deletePost = await Post.destroy({
@@ -49,6 +51,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 module.exports = router 
 
 
