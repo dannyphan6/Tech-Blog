@@ -23,7 +23,28 @@ router.get('/', withAuth, async (req, res) => {
     })
 })
 
-router.get('/singlepost')
+router.get('/dashboard/:id', withAuth, async (req, res) => {
+    const postData = await Post.findOne({
+        where: {
+            id: req.params.id
+        },
+        
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+        ],
+      });
+  
+    // Serialize data so the template can read it
+    const posts = postData.map((posts) => posts.get({ plain: true }));
+
+    res.render('singlepost', {
+        posts,
+        logged_in: req.session.logged_in
+    })
+})
 
 // Get route to render newpost handlebar
 router.get('/newpost', withAuth, (req, res) => {
