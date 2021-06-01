@@ -23,8 +23,8 @@ router.get('/', withAuth, async (req, res) => {
     })
 })
 
-router.get('/dashboard/:id', withAuth, async (req, res) => {
-    const postData = await Post.findOne({
+router.get('/:id', withAuth, async (req, res) => {
+    const singlePostData = await Post.findOne({
         where: {
             id: req.params.id
         },
@@ -36,9 +36,7 @@ router.get('/dashboard/:id', withAuth, async (req, res) => {
           },
         ],
       });
-  
-    // Serialize data so the template can read it
-    const posts = postData.map((posts) => posts.get({ plain: true }));
+      let posts = singlePostData.dataValues
 
     res.render('singlepost', {
         posts,
