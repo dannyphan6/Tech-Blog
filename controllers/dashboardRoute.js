@@ -23,6 +23,8 @@ router.get('/', withAuth, async (req, res) => {
     })
 })
 
+router.get('/singlepost')
+
 // Get route to render newpost handlebar
 router.get('/newpost', withAuth, (req, res) => {
     res.render('newpost', {
