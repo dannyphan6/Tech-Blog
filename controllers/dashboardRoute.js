@@ -23,7 +23,7 @@ router.get('/', withAuth, async (req, res) => {
     })
 })
 
-router.get('/:id', withAuth, async (req, res) => {
+router.get('/newpost/:id', withAuth, async (req, res) => {
     const singlePostData = await Post.findOne({
         where: {
             id: req.params.id
@@ -36,7 +36,9 @@ router.get('/:id', withAuth, async (req, res) => {
           },
         ],
       });
-      const posts = singlePostData.get({ plain: true });
+
+    const posts = singlePostData.get({ plain: true });
+
     res.render('singlepost', {
         posts,
         logged_in: req.session.logged_in
