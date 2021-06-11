@@ -52,9 +52,25 @@ router.get('/newpost', withAuth, (req, res) => {
     })
 })
 
-router.get('/updatepost', withAuth, (req, res) => {
-    res.render('updatepost', {
-        logged_in: req.session.logged_in
+router.get('/updatepost', withAuth, async (req, res) => {
+  const updateSinglePost = await Post.findOne({
+    where: {
+        id: req.params.id
+    },
+    
+    include: [
+      {
+        model: User,
+        attributes: ['username'],
+      },
+    ],
+  });
+
+const posts = updateSinglePost.get({ plain: true });
+  
+  res.render('updatepost', {
+      posts,
+      logged_in: req.session.logged_in
     })
 })
 

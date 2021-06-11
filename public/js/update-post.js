@@ -8,6 +8,7 @@ const updatePostHandler = async (event) => {
     const title = document.querySelector('#title').value.trim();
     const postBody = document.querySelector('#postBody').value.trim();
   
+    console.log("hello world");
     if (postBody) {
       const response = await fetch(`/api/post/${updatePost}`, {
         method: 'PUT',
@@ -18,8 +19,8 @@ const updatePostHandler = async (event) => {
         },
       });
   
-      if (response.ok) {                                                                        `                                                                                                                                     `
-        // Reload the page when comment is added 
+      if (response.ok) { 
+        // Reload the page when post is added 
         document.location.replace('/dashboard');
       } else {
         alert('Failed to update post');
