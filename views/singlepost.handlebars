@@ -1,7 +1,8 @@
 <div class="card m-3">
     <div class="card-header">
         <p class="custom-p" id="title">{{posts.title}}</p>
-        <a class="update-post" id="update-post" href="/dashboard/updatepost">Edit</a>
+        <a class="update-post" id="updatePost" href="/dashboard/updatepost/{{posts.id}}">Edit</a>
+        <a class="delete-btn" id="deletePost" href="/dashboard/updatepost">Delete</a>
     </div>
     <div class="card-body" id="postBody">
         <p class="custom-p">{{posts.body}}</p>
