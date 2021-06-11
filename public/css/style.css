@@ -19,3 +19,7 @@
 .custom-p {
     margin: 0!important;
 }
+
+#update-post {
+    float: right;
+}

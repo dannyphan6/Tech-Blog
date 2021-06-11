@@ -52,4 +52,10 @@ router.get('/newpost', withAuth, (req, res) => {
     })
 })
 
+router.get('/updatepost', withAuth, (req, res) => {
+    res.render('updatepost', {
+        logged_in: req.session.logged_in
+    })
+})
+
 module.exports = router

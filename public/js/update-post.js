@@ -8,8 +8,8 @@ const updatePostHandler = async (event) => {
     const title = document.querySelector('#title').value.trim();
     const postBody = document.querySelector('#postBody').value.trim();
   
-    if (comment) {
-      await fetch(`/api/post/${updatePost}`, {
+    if (postBody) {
+      const response = await fetch(`/api/post/${updatePost}`, {
         method: 'PUT',
         // Grabbing the comment and postId from the handlebars and sending it to the route (/api/comment)
         body: JSON.stringify({ title , postBody }),
@@ -18,7 +18,7 @@ const updatePostHandler = async (event) => {
         },
       });
   
-      if (response.ok) {
+      if (response.ok) {                                                                        `                                                                                                                                     `
         // Reload the page when comment is added 
         document.location.replace('/dashboard');
       } else {
