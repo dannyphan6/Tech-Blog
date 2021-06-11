@@ -20,6 +20,7 @@
     margin: 0!important;
 }
 
-#update-post {
+.float-right {
     float: right;
+    margin-left: 3rem;
 }
