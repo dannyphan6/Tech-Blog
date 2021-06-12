@@ -1,5 +1,8 @@
 const deletePost = document.querySelector("#deletePost")
 const updatePost = document.querySelector("#updatePost")
+const urlArray = window.location.toString().split("/")
+const lastIndex = urlArray.length - 1 
+const postId = urlArray[lastIndex]
 
 const updatePostHandler = async (event) => {
     event.preventDefault();
@@ -30,9 +33,10 @@ const updatePostHandler = async (event) => {
   };
   
   const delPostHandler = async () => {
-    await fetch(`/api/post/${deletePost}`, {
+    const response = await fetch(`/api/post/${postId}`, {
         method: 'DELETE'
     })
+    console.log("response", response);
     document.location.replace('/dashboard')
   };
 
