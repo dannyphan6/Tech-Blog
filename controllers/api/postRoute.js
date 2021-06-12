@@ -16,7 +16,7 @@ router.post('/', withAuth, async (req, res) => {
 })
 
 // Edits a single post dependent on the ID
-router.put('/updatepost/:id', async (req, res) => {
+router.put('/updatepost/:id', withAuth, async (req, res) => {
   console.log("hello world");  
   try {   
     const updatePost = await Post.update(
