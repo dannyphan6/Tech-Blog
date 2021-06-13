@@ -9,7 +9,7 @@ const newCommentHandler = async (event) => {
     await fetch(`/api/comment`, {
       method: 'POST',
       // Grabbing the comment and postId from the handlebars and sending it to the route (/api/comment)
-      body: JSON.stringify({ postId , comment }),
+      body: JSON.stringify({ postId, comment }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -20,8 +20,8 @@ const newCommentHandler = async (event) => {
       document.location.reload();
     } else {
       alert('Failed to create comment');
-    }
-  }
+    };
+  };
 };
 
 document.querySelector('.new-comment').addEventListener('submit', newCommentHandler);

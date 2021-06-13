@@ -27,32 +27,26 @@ router.post('/login', async (req, res) => {
 
     // If there is not a username associated with a user, then send the message 'Incorrect...'
     if (!userData) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect username or password, please try again' });
+      res.status(400).json({ message: 'Incorrect username or password, please try again' });
       return;
-    }
+    };
 
     // Checks to see if the username matches the password in req.body 
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: 'Incorrect username or password, please try again' });
+      res.status(400).json({ message: 'Incorrect username or password, please try again' });
       return;
-    }
+    };
 
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      
       res.json({ user: userData, message: 'You are now logged in!' });
     });
-
   } catch (err) {
     res.status(400).json(err);
-  }
+  };
 });
 
 // Route for user to logout
@@ -63,7 +57,7 @@ router.post('/logout', (req, res) => {
     });
   } else {
     res.status(404).end();
-  }
+  };
 });
 
 module.exports = router;

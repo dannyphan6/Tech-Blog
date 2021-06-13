@@ -1,15 +1,14 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection')
+const sequelize = require('../config/connection');
 
-class Comment extends Model{};
+class Comment extends Model { };
 
 Comment.init({
-    
-    
     body: {
         type: DataTypes.STRING,
         allowNull: false,
-    }},
+    }
+},
     {
         sequelize,
         freezeTableName: true,
@@ -18,4 +17,4 @@ Comment.init({
     }
 );
 
-module.exports = Comment
+module.exports = Comment;

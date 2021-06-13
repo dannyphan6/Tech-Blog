@@ -1,7 +1,7 @@
-const { Comment } = require('../../models')
-const router = require('express').Router()
+const { Comment } = require('../../models');
+const router = require('express').Router();
 // Authorizes functions when logged in. Without being logged in, can't do anything
-const withAuth = require('../../utils/auth')
+const withAuth = require('../../utils/auth');
 
 // Route for creating a comment, but user must be logged in hence withAuth
 router.post('/', withAuth, async (req, res) => {
@@ -12,10 +12,10 @@ router.post('/', withAuth, async (req, res) => {
             // user_id is associated with the comment 
             user_id: req.session.user_id,
         });
-        res.json(newComment)
+        res.json(newComment);
     } catch (err) {
-        res.json(err)
-    }
-})
+        res.json(err);
+    };
+});
 
-module.exports = router
+module.exports = router;
