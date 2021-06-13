@@ -1,4 +1,3 @@
-const deletePost = document.querySelector("#deletePost")
 const updatePost = document.querySelector("#updatePost")
 
 const updatePostHandler = async (event) => {
@@ -28,13 +27,5 @@ const updatePostHandler = async (event) => {
       }
     }
   };
-  
-  const delPostHandler = async () => {
-    await fetch(`/api/post/${deletePost}`, {
-        method: 'DELETE'
-    })
-    document.location.replace('/dashboard')
-  };
 
-  document.querySelector('.update-post').addEventListener('submit', updatePostHandler);
-  document.querySelector('.delete-btn').addEventListener('submit', delPostHandler);
+document.querySelector('.update-post').addEventListener('submit', updatePostHandler);
