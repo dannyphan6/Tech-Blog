@@ -1,10 +1,10 @@
 {{#each posts as |post|}}
-  <div class="card m-3">
-    <div class="card-header">
-      <p class="custom-p">{{post.title}}</p>
+  <div class="card m-4" >
+    <div class="card-header" id="nav-style">
+      <p class="custom-p text-style">{{post.title}} <span class="float-right">Posted By: {{User.username}}</span></p>
     </div>
     <div class="card-body">
-      <p class="custom-p">{{post.body}} {{User.username}}</p>
+      <p class="custom-p">{{post.body}} </p>
     </div>
   </div>
 {{/each}}

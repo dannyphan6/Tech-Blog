@@ -1,3 +1,31 @@
+body {
+    font-family: 'Stint Ultra Condensed', cursive;
+    letter-spacing: 2px;
+}
+
+.font-size {
+    font-size: 2rem;
+}
+
+p, label, input, textarea, form {
+    letter-spacing: 2px;
+    font-size: 2.25rem;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.text-color {
+    color: white !important;
+    font-size: 2rem;
+}
+
+#nav-style {
+    background-color: rgb(10, 82, 129);
+    color: white;
+}
+
 #login-form {
     height: 500px;
     width: 500px;
@@ -23,4 +51,33 @@
 .float-right {
     float: right;
     margin-left: 3rem;
+}
+
+.delete-btn-style {
+    padding: .75rem;
+    background-color:  rgb(10, 82, 129);
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+}
+.delete-btn-style:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.btn-style {
+    padding: .75rem;
+    background-color:  rgb(10, 82, 129);
+    color: white;
+    font-size: 1.5rem;
+}
+
+.btn-style:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.single-post-style {
+    background-color: rgb(10, 82, 129);
+    color: white;
 }

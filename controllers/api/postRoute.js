@@ -7,17 +7,16 @@ router.post('/', withAuth, async (req, res) => {
     // Creates a new post thats added to req.body, along with user_id
     const newPost = await Post.create({
       ...req.body,
-      user_id: req.session.user_id,
+      userId: req.session.user_id,
     });
     res.json(newPost);
   } catch (err) {
     res.json(err);
-  };s
+  };
 });
 
 // Edits a single post dependent on the ID
 router.put('/updatepost/:id', withAuth, async (req, res) => {
-  console.log('hello world');
   try {
     const updatePost = await Post.update(
       req.body, {
