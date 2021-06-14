@@ -14,7 +14,13 @@ Writing about tech is just as important as making it. Developers spend plenty of
 
 Below is an example that shows the application's appearance and functionality:
 
-![Tech-Blog](./public/images/)
+![Tech-Blog-Home-Page](./public/images/home.PNG)
+
+![Tech-Blog-Single-Post-Page](./public/images/single-post.PNG)
+
+![Tech-Blog-Edit-Post-Page](./public/images/edit-post.PNG)
+
+![Tech-Blog-Update-Post-Page](./public/images/update-post.PNG)
 
 ## Deployed Link
 Please feel free to visit the live web application. Link is below.
