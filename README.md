@@ -25,7 +25,7 @@ Below is an example that shows the application's appearance and functionality:
 ## Deployed Link
 Please feel free to visit the live web application. Link is below.
 
-![Tech-Blog](./public/assets/images/Capture.PNG)
+[Tech-Blog]()
 
 ## Installation
 Before running the application, the user must execute the command "npm install" to install all of the required dependencies. You're all set once all dependencies are installed!
