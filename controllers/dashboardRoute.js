@@ -1,7 +1,5 @@
 const router = require('express').Router();
-const { Comment } = require('../models/Comment');
-const { Post } = require('../models/Post');
-const { User } = require('../models/User');
+const { Comment, User, Post } = require('../models/');
 const withAuth = require('../utils/auth');
 
 // Get route to render dashboard handlebar
