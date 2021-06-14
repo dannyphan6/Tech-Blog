@@ -81,3 +81,7 @@ h1 {
     background-color: rgb(10, 82, 129);
     color: white;
 }
+
+#logout:hover {
+    cursor: pointer;
+}
