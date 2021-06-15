@@ -22,7 +22,7 @@ Post.init({
     {
         sequelize,
         freezeTableName: true,
-        underscored: true,
+        // underscored: true,
         modelName: 'Post'
     }
 );
