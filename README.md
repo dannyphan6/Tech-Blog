@@ -14,24 +14,28 @@ Writing about tech is just as important as making it. Developers spend plenty of
 
 Below is an example that shows the application's appearance and functionality:
 
+## Home Page
 ![Tech-Blog-Home-Page](./public/images/home.PNG)
 
+## All Posts
 ![Tech-Blog-Single-Post-Page](./public/images/single-post.PNG)
 
+## Single Post
 ![Tech-Blog-Edit-Post-Page](./public/images/edit-post.PNG)
 
+## Update Post
 ![Tech-Blog-Update-Post-Page](./public/images/update-post.PNG)
 
 ## Deployed Link
 Please feel free to visit the live web application. Link is below.
 
-[Tech-Blog]()
+[Tech-Blog](https://git.heroku.com/evening-lowlands-32594.git)
 
 ## Installation
 Before running the application, the user must execute the command "npm install" to install all of the required dependencies. You're all set once all dependencies are installed!
 
 ## Usage
-In order to run this application locally, run the command "npm start" in the terminal. This will execute the application where the user will be able to create, view, update, and delete posts, as long as they're signed in. The home page is where all posts, along with their comments will be displayed. If the user would like to edit the post, then they will have to navigate to 'Dashboard' where each post will be displayed. From there, click on the single post and it'll navigate to a different page, where the user can either edit or delete the post. 
+In order to run this application locally, run the command "npm start" in the terminal. This will execute the application where the user will be able to create, view, update, and delete posts, as long as they're signed in. The home page is where all posts, along with their comments will be displayed. If the user would like to edit the post, then they will have to navigate to 'Dashboard' where each post will be displayed. From there, click on the single post and it'll navigate to a different page, where the user can either edit or delete the post. Make your changes and check the home page to see them! 
 
 ## Contributors
 Please feel free to create pull requests. They will be reviewed before merging. If you would like to make any major changes, please open an issue to discuss these changes.
