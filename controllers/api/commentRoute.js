@@ -1,4 +1,4 @@
-const { Comment } = require('../../models/');
+const { Comment } = require('../../models/Comment');
 const router = require('express').Router();
 // Authorizes functions when logged in. Without being logged in, can't do anything
 const withAuth = require('../../utils/auth');
