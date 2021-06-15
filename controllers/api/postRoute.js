@@ -1,4 +1,4 @@
-const { Post } = require('../../models');
+const { Post } = require('../../models/');
 const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 
